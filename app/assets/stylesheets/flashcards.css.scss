@@ -1,0 +1,163 @@
+// Place all the styles related to the Flashcards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Flashcard */
+.card-container {
+  min-width: 280px;
+  height: 400px;
+  position: relative;
+  -webkit-perspective: 800px;
+     -moz-perspective: 800px;
+       -o-perspective: 800px;
+          perspective: 800px; }
+
+#card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+	-moz-border-radius: 5px;
+			 border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 7px #888;
+		 -moz-box-shadow: 0px 0px 7px #888;
+		 			box-shadow: 0px 0px 7px #888;
+  -webkit-transition: -webkit-transform 0.5s;
+     -moz-transition: -moz-transform 0.5s;
+       -o-transition: -o-transform 0.5s;
+          transition: transform 0.5s;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
+
+#card.flipped {
+  -webkit-transform: rotateY( 180deg );
+     -moz-transform: rotateY( 180deg );
+       -o-transform: rotateY( 180deg );
+          transform: rotateY( 180deg ); }
+
+#card figure {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+       -o-backface-visibility: hidden;
+          backface-visibility: hidden; }
+
+#card .front { }
+#card .back {
+  -webkit-transform: rotateY( 180deg );
+     -moz-transform: rotateY( 180deg );
+       -o-transform: rotateY( 180deg );
+          transform: rotateY( 180deg ); }
+.back-text {
+	height: 90%;
+	width: 100%;
+	overflow: hidden; }
+.back-text .original-word {
+	padding: 5px 5px 5px 5px; }
+.original-word .word {
+	padding: 15px 0px 0px 10px;
+	font-weight: bold;
+	float:left;
+	width: 80%;
+ 	font-size: 25px; }
+.original-word .level {
+	float:left;
+	padding: 0px 0px 15px 10px;
+	font-weight: bold;
+ 	font-size: 25px; }
+.original-word .pronunciation {
+	padding: 0px 0px 0px 10px;
+ 	font-size: 10px; }
+.translations {
+	padding: 20px 0px 20px 0px; }
+.translations .header {
+	font-weight: bold;
+	padding: 0px 5px 0px 5px; }
+.translation {
+	padding: 0px 5px 0px 15px; }
+.example-sentences {
+	padding: 0px; }
+.example-sentences .header {
+	font-weight: bold;
+	padding: 2px 5px 2px 5px; }
+.example-sentence {
+	background-color: #fafafa;
+	padding: 2px 5px 2px 5px;
+	border-top: 1px solid #f5f5f5;
+	border-bottom: 1px solid #f5f5f5; }
+.example-sentence:hover {
+	background-color: #fefefe; }
+.example-sentences > .example-sentence + .example-sentence {
+	margin-top: -1px; }
+.example-sentences > .example-sentence:nth-child(even) {
+	background-color: #f8f8f8; }
+.example-sentence:nth-child(even):hover {
+	background-color: #fefefe; }
+.korean {
+  text-align: center;
+  vertical-align: middle;
+	height: 100%; }
+.korean .word {
+	padding: 7px;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 350px;
+  text-align: center;
+	vertical-align: middle; }
+.button-group {
+	position: relative;
+	white-space: nowrap;
+	background-color: #bfbfbf;
+	width: 100%;
+	height: 10%;
+  -webkit-border-radius: 0 0 5px 5px;
+     -moz-border-radius: 0 0 5px 5px;
+          border-radius: 0 0 5px 5px; }
+.button {
+	display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+	font-size: 14px;
+	width: 40%;
+	height: 100%;
+	font-weight: bold;
+	color: #282828;
+  background-color: #f5f5f5;
+	border: 1px solid #bbbbbb;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #a2a2a2;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
+.button-group > .button {
+  position: relative;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0; }
+.button-group > .button + .button {
+  margin-left: -4px; }	
+	
+.button-group > .button:first-child, {
+	margin-left: -1px;
+  -webkit-border-radius: 0 0 0 5px;
+     -moz-border-radius: 0 0 0 5px;
+          border-radius: 0 0 0 5px; }
+.button-group > .button:last-child, {
+	width: 21%;
+  -webkit-border-radius: 0 0 5px 0;
+     -moz-border-radius: 0 0 5px 0;
+          border-radius: 0 0 5px 0; }
+	
+#card .back .button:hover,
+#card .back .button:active,
+#card .back .button.active,
+#card .back .button.disabled {
+  color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9; }

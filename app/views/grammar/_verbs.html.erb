@@ -1,0 +1,112 @@
+<div class="row-fluid">
+	<div class="span12">
+		<h2><%=t :verb_title%></h2>
+		<p><%=t :verb_description%></p>
+		<ul class="nav nav-tabs" id="myTab">
+		  <li class="active"><a href="#conjugations">Conjugations</a></li>
+		  <li><a href="#honorific">Honorific</a></li>
+			<li><a href="#home">Conjugations</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane active" id="conjugations">
+				<table class="table table-hover table-condensed">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Plain</th>
+							<th>Informal</th>
+							<th>Polite</th>
+							<th>Formal</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Present</th>
+							<td><%= @verb.present.plain %></td>
+							<td><%= @verb.present.informal %></td>
+							<td><%= @verb.present.polite %></td>
+							<td><%= @verb.present.formal %></td>
+						</tr>
+						<tr>
+							<th>Past</th>
+							<td><%= @verb.past.plain %></td>
+							<td><%= @verb.past.informal %></td>
+							<td><%= @verb.past.polite %></td>
+							<td><%= @verb.past.formal %></td>
+						</tr>
+						<tr>
+							<th>Future</th>
+							<td><%= @verb.future.plain %></td>
+							<td><%= @verb.future.informal %></td>
+							<td><%= @verb.future.polite %></td>
+							<td><%= @verb.future.formal %></td>
+						</tr>
+					</tbody>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Plain</th>
+							<th>Informal</th>
+							<th>Polite</th>
+							<th>Formal</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>propositive</th>
+							<td><%= @verb.propositive.plain %></td>
+							<td><%= @verb.propositive.informal %></td>
+							<td><%= @verb.propositive.polite %></td>
+							<td><%= @verb.propositive.formal %></td>
+						</tr>
+						<tr>
+							<th>Imperative</th>
+							<td><%= @verb.imperative.plain %></td>
+							<td><%= @verb.imperative.informal %></td>
+							<td><%= @verb.imperative.polite %></td>
+							<td><%= @verb.imperative.formal %></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tab-pane" id="honorific">
+				<table class="table table-hover table-condensed">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Plain</th>
+							<th>Informal</th>
+							<th>Polite</th>
+							<th>Formal</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Present</th>
+							<td><%= @verb.present.honorific.plain %></td>
+							<td><%= @verb.present.honorific.informal %></td>
+							<td><%= @verb.present.honorific.polite %></td>
+							<td><%= @verb.present.honorific.formal %></td>
+						</tr>
+						<tr>
+							<th>Past</th>
+							<td><%= @verb.past.honorific.plain %></td>
+							<td><%= @verb.past.honorific.informal %></td>
+							<td><%= @verb.past.honorific.polite %></td>
+							<td><%= @verb.past.honorific.formal %></td>
+						</tr>
+						<tr>
+							<th>Future</th>
+							<td><%= @verb.future.honorific.plain %></td>
+							<td><%= @verb.future.honorific.informal %></td>
+							<td><%= @verb.future.honorific.polite %></td>
+							<td><%= @verb.future.honorific.formal %></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<p><%=t :verb_table_caption%><%= @verb.connective %></p>
+	</div>
+</div>

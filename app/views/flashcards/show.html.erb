@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @flashcard.user %>
+</p>
+
+<p>
+  <b>Word:</b>
+  <%= @flashcard.word %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= @flashcard.level %>
+</p>
+
+
+<%= link_to 'Edit', edit_flashcard_path(@flashcard) %> |
+<%= link_to 'Back', flashcards_path %>

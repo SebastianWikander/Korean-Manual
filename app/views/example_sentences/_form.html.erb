@@ -1,0 +1,25 @@
+<%= form_for(@example_sentence) do |f| %>
+  <% if @example_sentence.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@example_sentence.errors.count, "error") %> prohibited this example_sentence from being saved:</h2>
+
+      <ul>
+      <% @example_sentence.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :korean %><br />
+    <%= f.text_field :korean %>
+  </div>
+  <div class="field">
+    <%= f.label :english %><br />
+    <%= f.text_field :english %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

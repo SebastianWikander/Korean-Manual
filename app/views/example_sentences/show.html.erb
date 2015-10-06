@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Korean:</b>
+  <%= @example_sentence.korean %>
+</p>
+
+<p>
+  <b>English:</b>
+  <%= @example_sentence.english %>
+</p>
+
+
+<%= link_to 'Edit', edit_example_sentence_path(@example_sentence) %> |
+<%= link_to 'Back', example_sentences_path %>

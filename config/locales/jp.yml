@@ -1,0 +1,28 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+jp:
+  title: "韓国語参考書"
+  hangul_title: "ハングル"
+  verb_title: "動詞"
+  verb_description: 
+    "Prefixes can also be used to bend verbs, 
+	there are two different prefixed, 
+	안 and 못 that represent not and can't"
+  verb_table_caption: 
+    "This table describes the behaviour of a standard verb"
+
+# Counters
+  counter_for_things: "Things"
+  counter_for_bottles: "Bottles"
+  counter_for_clothing: "Clothing"
+  counter_for_vehicles: "Vehicles"
+  counter_for_houses: "Houses"
+  counter_for_buildings: "Buildning"
+  counter_for_paper: "Paper"
+  counter_for_books: "Books"
+  counter_for_people_informal: "People (informal)"
+  counter_for_people_formal: "People (formal)"
+  counter_for_years_native: "Years (Korean)"
+  counter_for_years_chinese: "Years (Chinese)"
+  

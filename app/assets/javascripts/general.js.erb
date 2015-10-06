@@ -1,0 +1,21 @@
+$(document).ready(function() {
+	$(".location").hover(function() {
+		$(this).animate({
+			opacity: "1" }, "fast");
+	}, function() {
+		$(this).animate({
+			opacity: "0" }, "fast");	
+	});
+});
+
+$(document).ready(function() {
+	$("#set_locale").click(function() {
+		window.location.href = "/grammar?locale=jp";
+	});
+});
+
+$(document).ready(function() {
+	$(".front").click(function() {
+  	$("#card").toggleClass("flipped");
+	});
+});

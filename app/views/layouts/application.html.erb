@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Korean Reference Manual</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<%= stylesheet_link_tag "stylesheet", :media => "all" %>
+	<%= stylesheet_link_tag "flashcards", :media => "all" %>
+	<%= stylesheet_link_tag "bootstrap", :media => "all" %>
+	<%= stylesheet_link_tag "bootstrap-responsive", :media => "all" %>
+	
+	<%= javascript_include_tag "application" %>
+</head>
+<body>
+	
+<%= render "shared/menu" %>
+
+<div class="container">
+	<%= render "shared/header" %>
+	<%= yield %>
+</div>
+<%= render "shared/footer" %>
+</body>
+</html>

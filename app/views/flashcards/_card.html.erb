@@ -1,0 +1,42 @@
+<section class="card-container span-4">
+  <div id="card">
+    <figure class="front">
+			<div class="korean">
+				<span class="word"><%= @flashcard.word.korean %></span>
+			</div>
+		</figure>
+    <figure class="back">
+			<div class="back-text">
+				<div class="original-word">
+					<div class="word"><%= @flashcard.word.korean %></div>
+					<div class="level"><span class="badge badge-warning"><%= @flashcard.level %></span></div>
+					<div  class="pronunciation">hangukeo</div>
+				</div>
+				<div class="translations">
+					<div class="header">Translation:</div>
+					<% @flashcard.word.translations.each do |translation| %>
+					<div class="translation"><%= translation.english %></div>
+					<% end %>
+				</div>
+				<% if @flashcard.word.has_example_sentences? %>
+				<div class="example-sentences">
+					<div class="header">
+						Example sentences:
+					</div>
+					<% @flashcard.word.example_sentences.each do |example_sentence| %>
+					<div class="example-sentence">
+						<%= example_sentence.korean %></br>
+						<%= example_sentence.english %>
+					</div>
+					<% end %>
+				</div>
+				<% end %>
+			</div>
+			<div class="button-group">
+				<button class="button" id="wrong">Wrong</button>
+				<button class="button" id="correct">Correct</button>
+				<button class="button">○</button>
+			</div>
+		</figure>
+  </div>
+</section>

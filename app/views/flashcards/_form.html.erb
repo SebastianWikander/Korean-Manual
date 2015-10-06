@@ -1,0 +1,9 @@
+<%= form_for(@flashcard) do |f| %>
+  <div class="field">
+    <%= f.label :level %><br />
+    <%= f.text_field :level %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
